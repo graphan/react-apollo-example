@@ -16,37 +16,18 @@ const Menu = ({ data }) => {
     return (null);
   }
 
-  const { wp_query } = data;
-  const { menu } = wp_query;
-
   return (
-    <div>
-      <ul className={s.menu}>
-        {menu.map((menuItem) => {
-          return (
-            <li key={menuItem.id}><Link to={menuItem.title.toLowerCase()} smooth>{menuItem.title}</Link></li>
-          );
-        })}
-      </ul>
-      <DropdownButton id="dropdown" bsStyle="default" noCaret title={[<span />]} className={s.dropdown}>
-        {menu.map((menuItem) => {
-          return (
-            <MenuItem key={menuItem.id} className={s['dropdown-menu']}>
-              <Link to={menuItem.title.toLowerCase()} smooth>{menuItem.title}</Link>
-            </MenuItem>
-          );
-        })}
-      </DropdownButton>
-    </div>
+    <div></div>
     );
 };
 
 const MenuWithData = graphql(gql`
-  query getMenu ($lang: String!) {
-    wp_query {
-      menu (name: $lang) {
-        id
-        title
+  query allPeople {
+    allPeople {
+      edges {
+        node {
+          id
+        }
       }
     }
   }

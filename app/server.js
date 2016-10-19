@@ -16,7 +16,7 @@ dotenv.config();
 const GRAPHQL_ENDPOINT = process.env.GRAPHQL_ENDPOINT || 'graphql';
 const GRAPHQL_PORT = process.env.GRAPHQL_PORT || 8000;
 const HOST = process.env.HOST || 'http://localhost';
-const apiUrl = `${HOST}:${GRAPHQL_PORT}/${GRAPHQL_ENDPOINT}`;
+const apiUrl = 'http://graphql-swapi.parseapp.com/';
 
 export default function render(req, res) {
   const client = new ApolloClient({

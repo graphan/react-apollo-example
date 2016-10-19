@@ -15,23 +15,8 @@ const Lang = ({ language, changeLang, data }) => {
     return (null);
   }
 
-  const { wp_query } = data;
-  const { terms } = wp_query;
-  const languages = terms[0].children;
-
   return (
-    <DropdownButton
-      bsStyle="default" title={[<LangIcon language={language} />]} id="Lang"
-      className={s.dropdown}
-    >
-      {languages.map((lang) => {
-        return (
-          <MenuItem key={lang.term_id} onClick={() => changeLang(lang.slug)} className={s['dropdown-menu']}>
-            <LangIcon language={lang.slug} />
-          </MenuItem>
-        );
-      })}
-    </DropdownButton>
+    <div></div>
   );
 };
 
@@ -50,13 +35,11 @@ const LangWithState = connect(
 )(Lang);
 
 const PageWithDataAndState = graphql(gql`
-  query getTerms {
-    wp_query {
-      terms(slug: "languages") {
-        term_id
-        children {
-          term_id
-          slug
+  query allPlanets {
+    allPlanets {
+      edges {
+        node {
+          id
         }
       }
     }

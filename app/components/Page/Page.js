@@ -23,22 +23,17 @@ const Page = ({ data }) => {
 
   return (
     <div>
-      {posts.map((post) => {
-        return (
-          <div key={post.title} dangerouslySetInnerHTML={{ __html: post.content }} />
-        );
-      })}
-      <a className="toTop" onClick={() => animateScroll.scrollToTop()} />
     </div>
   );
 };
 
 const PageWithData = graphql(gql`
-  query getPosts ($lang: String!) {
-    wp_query {
-      posts (category_name: $lang) {
-        title
-        content
+  query allFilms {
+    allFilms {
+      edges {
+        node {
+          id
+        }
       }
     }
   }
