@@ -35,7 +35,7 @@ const LangWithState = connect(
 )(Lang);
 
 const PageWithDataAndState = graphql(gql`
-  query allPosts {
+  query lang {
     posts {
       id
     }

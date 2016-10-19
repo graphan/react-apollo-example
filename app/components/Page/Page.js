@@ -25,7 +25,7 @@ const Page = ({ data }) => {
 };
 
 const PageWithData = graphql(gql`
-  query allPosts {
+  query page {
     posts {
       votes
     }

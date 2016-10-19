@@ -22,7 +22,7 @@ const Menu = ({ data }) => {
 };
 
 const MenuWithData = graphql(gql`
-  query allPosts {
+  query menu {
     posts {
       title
     }
