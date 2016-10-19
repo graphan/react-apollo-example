@@ -27,21 +27,19 @@
  
 ## Running the app
 
-### 1. This repository is the frontend for [Wordpress GraphQL API Example](https://github.com/WeLikeGraphQL/wordpress-graphql-api-example). You need to run it first, however, you can also set up own endpoints.
-
-### 2. Install Node/npm
+### 1. Install Node/npm
 
 Make sure you have Node.js installed (the app has been tested with Node `5.12.0`)
 
-### 3. Clone and install dependencies
+### 2. Clone and install dependencies
 
 ```
-git clone https://github.com/WeLikeGraphQL/react-apollo-example.git
+git clone https://github.com/graphan/react-apollo-example.git
 cd react-apollo-example
 npm install
 ```
 
-### 4. Build and run the app
+### 3. Build and run the app
 
 Development mode:
 ```
