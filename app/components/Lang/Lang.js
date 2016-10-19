@@ -16,7 +16,7 @@ const Lang = ({ language, changeLang, data }) => {
   }
 
   return (
-    <div></div>
+    <div>Lang</div>
   );
 };
 
@@ -35,13 +35,9 @@ const LangWithState = connect(
 )(Lang);
 
 const PageWithDataAndState = graphql(gql`
-  query allPlanets {
-    allPlanets {
-      edges {
-        node {
-          id
-        }
-      }
+  query allPosts {
+    posts {
+      id
     }
   }
 `)(LangWithState);

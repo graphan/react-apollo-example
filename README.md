@@ -61,3 +61,19 @@ Best way to keep up to date is check the [issues](https://github.com/WeLikeGraph
 
 1. Any suggestions/improvements/bugs can be in the form of Pull Requests, or creating an issue.
 2. Coding guidelines: [Airbnb's Style Guide](https://github.com/airbnb/javascript)
+
+I have already applied your hints. I just forked `react-apollo-example` and pushed [this commit](https://github.com/graphan/react-apollo-example/commit/4b0b8394d6eea335119d6d61af4e84295e660cdd). You can see that I use: http://graphql-swapi.parseapp.com. There are no any difference in the project despite the above commit.
+
+When I run: `npm run build` and `npm run start`, then no errors.
+However, when I reach `localhost:3000`, then I have the following error in the console:
+```console
+RENDERING ERROR: { [Error: Network error: Unexpected token <]
+  graphQLErrors: null,
+  networkError: [SyntaxError: Unexpected token <],
+  stack: 'Error\n    at new t (/home/tommyjs/Desktop/WLGQL/copy/react-apollo-example/dist/server.js:7:13556)\n    at /home/tommyjs/Desktop/WLGQL/copy/react-apollo-example/dist/server.js:31:28905\n    at /home/tommyjs/Desktop/WLGQL/copy/react-apollo-example/dist/server.js:32:6321\n    at Array.forEach (native)\n    at /home/tommyjs/Desktop/WLGQL/copy/react-apollo-example/dist/server.js:32:6284\n    at /home/tommyjs/Desktop/WLGQL/copy/react-apollo-example/dist/server.js:38:7557\n    at i (/home/tommyjs/Desktop/WLGQL/copy/react-apollo-example/dist/server.js:38:7325)\n    at m (/home/tommyjs/Desktop/WLGQL/copy/react-apollo-example/dist/server.js:38:8190)\n    at e.broadcastQueries (/home/tommyjs/Desktop/WLGQL/copy/react-apollo-example/dist/server.js:32:6246)\n    at e.broadcastNewStore (/home/tommyjs/Desktop/WLGQL/copy/react-apollo-example/dist/server.js:31:27393)',
+  message: 'Network error: Unexpected token <',
+  extraInfo: undefined }
+```
+
+What might be the root cause?
+I use `graphql@0.4.14`. I installed also `graphql@0.7.2`, but the same error.

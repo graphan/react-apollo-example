@@ -17,18 +17,14 @@ const Menu = ({ data }) => {
   }
 
   return (
-    <div></div>
+    <div>Menu</div>
     );
 };
 
 const MenuWithData = graphql(gql`
-  query allPeople {
-    allPeople {
-      edges {
-        node {
-          id
-        }
-      }
+  query allPosts {
+    posts {
+      title
     }
   }
 `, {

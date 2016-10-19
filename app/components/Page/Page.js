@@ -19,22 +19,15 @@ const Page = ({ data }) => {
     return (null);
   }
 
-  const { posts } = data.wp_query;
-
   return (
-    <div>
-    </div>
+    <div>Page</div>
   );
 };
 
 const PageWithData = graphql(gql`
-  query allFilms {
-    allFilms {
-      edges {
-        node {
-          id
-        }
-      }
+  query allPosts {
+    posts {
+      votes
     }
   }
 `, {
